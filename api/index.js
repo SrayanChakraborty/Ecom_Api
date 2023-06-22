@@ -2,6 +2,7 @@ const express=require('express') ;
 const app=express();
 const mongoose=require('mongoose'); 
 const dotenv=require('dotenv');
+const PORT=process.env.PORT || 5000;
 
 const authRoute=require('./routes/auth.js');
 const userRoute=require('./routes/user.js');
@@ -26,6 +27,6 @@ app.use("/api/product",productRoute);
 app.use('/api/order',orderRoute);
 
 
-app.listen(process.env.PORT || 5000 ,()=>{
+app.listen(PORT,()=>{
     
 })
